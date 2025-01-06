@@ -11,6 +11,7 @@ function convertValues(){
     const realToday = 0.18
     const euroToday = 6.14
     const libraToday = 7.41
+   
 
     
 
@@ -40,13 +41,21 @@ function convertValues(){
 
     }
 
+    if(currencySelect.value == "dolar"){
+
+        currencyValueConverd.innerHTML =  new Intl.NumberFormat("en-US",{
+            style:"currency",
+            currency:"USD"
+        }).format(inputCurrencyValue / dolarToday)
+
+    }
+
 
    
 
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US",{
-        style:"currency",
-        currency:"USD"
-    }).format(inputCurrencyValue)
+   
+
+   
    
 }
 
@@ -57,7 +66,7 @@ function changeCurrency(){
 
     if (currencySelect.value == "real") {
         currencyName.innerHTML = "Real"
-        currencyImage.src = "./assets/brasil 2.png"
+        currencyImage.src = "./assets/brasil 2 (1).png"
     }
 
     if (currencySelect.value == "euro") {
@@ -67,11 +76,14 @@ function changeCurrency(){
 
     if (currencySelect.value == "libra") {
         currencyName.innerHTML = "Libra"
-        currencyImage.src = "./assets/libra 1.png"
+        currencyImage.src = "./assets/libra 1 (1).png"
     }
+
+    
 
     convertValues()
 }
+
 
 
 
