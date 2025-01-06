@@ -41,12 +41,12 @@ function convertValues(){
 
     }
 
-    if(currencySelect.value == "dolar"){
+    {
 
-        currencyValueConverd.innerHTML =  new Intl.NumberFormat("en-US",{
+        currencyValueToConvert.innerHTML =  new Intl.NumberFormat("en-US",{
             style:"currency",
             currency:"USD"
-        }).format(inputCurrencyValue / dolarToday)
+        }).format(inputCurrencyValue)
 
     }
 
